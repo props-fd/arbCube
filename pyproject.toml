@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "GNN trained on CFOP 3x3 solutions applied to arbitrary cubes."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "kagglehub>=1.0.3",
+    "pandas>=3.1.1",
+]
 
 [tool.uv]
 package = false
