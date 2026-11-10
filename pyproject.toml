@@ -1,0 +1,10 @@
+[project]
+name = "arbcube"
+version = "0.1.0"
+description = "GNN trained on CFOP 3x3 solutions applied to arbitrary cubes."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+package = false
