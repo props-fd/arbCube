@@ -62,6 +62,32 @@ the color and integer encodings also need verification before building graphs.
 If Kaggle requests authentication, follow the
 [KaggleHub authentication instructions](https://github.com/Kaggle/kagglehub#authenticate).
 
+## Basic exploration with marimo
+
+From the repo root, run:
+
+```sh
+uv sync --locked
+uv run python -m arbcube.data
+uv run marimo edit notebooks/01_cfop_basics.py
+```
+
+The notebook loads all 110,000 complete solutions and shows solution lengths,
+move counts, and BPE compression. Set `rows_per_shard` to
+an integer in the loading cell if you want to limit the rows read per shard.
+
+The BPE section learns move blocks by repeatedly merging frequent adjacent
+blocks, starting from single moves. A move block is a single move or a learned
+sequence of moves. Adjust the merge budget to explore larger move libraries.
+Merges never cross solution boundaries.
+
+The solution-length curve plots mean move blocks per solution against the
+number of distinct move blocks on a linear x axis, with 10–90% and 25–75%
+quantile bands. It starts at the unmerged baseline and follows the selected
+merge budget. These lengths measure compression on the loaded training corpus,
+not held-out performance. A histogram below shows moves per block for the
+selected move library, counting each distinct block once, including single moves.
+
 ## Managing dependencies
 
 Use uv to update the shared dependency files:
