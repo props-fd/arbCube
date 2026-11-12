@@ -149,7 +149,6 @@ Solving the centers and pairing the edges, the remaining reduction steps, are ne
 | ben-mcaulay | cubetransfer: n^d cube engine, puzzle-agnostic GNN, transfer experiments, results viewer |
 | props-fd | nxn_reduction: NxN simulator, reduction and parity, CFOP parser and dataset, sticker GNN and baseline, beam search |
 
-<!-- AI use: fill in to match the course policy before submitting. -->
 
 ## Notes on the folders
 
