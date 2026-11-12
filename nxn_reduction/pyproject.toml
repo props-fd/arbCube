@@ -1,0 +1,15 @@
+[project]
+name = "cs224w-cube-gnn"
+version = "0.1.0"
+description = "Solving NxNxN Rubik's cubes with GNNs via the reduction method"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+ml = ["torch>=2.2", "torch_geometric>=2.5"]  # CPU wheels: see CLAUDE.md
+plots = ["matplotlib>=3.8"]  # results/plot.py
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
